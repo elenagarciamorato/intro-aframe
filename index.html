@@ -1,15 +1,26 @@
 <html>
   <head>
+    <meta charset="utf-8">
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="red"></a-box>
-      <a-box position="2.5 0.5 -3" rotation="0 0 0" src="./molinos-bw.jpg"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" src="https://raw.githubusercontent.com/jgbarah/aframe-playground/master/assets/imgs/bands.jpg"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      
+      <a-plane src="./retrato.jpg" position="-3 1.5 -2" height="1.5" width="2"
+               rotation="0 45 0"></a-plane>
+      <a-plane src="#./girasoles.jpg" position="0 1.5 -3" height="2" width="1.5"
+               rotation="0 0 0"></a-plane>
+      <a-plane src="#./noche.jpg" position="3 1.5 -2" height="1.5" width="2"
+               rotation="0 -45 0"></a-plane>
+      <a-plane src="./iglesia.jpg" position="6 1.5 0" height="1.5" width="3"
+               rotation="0 -90 0"></a-plane>
+
+      <a-entity movement-controls="fly: true" position="0 0 0">
+        <a-entity camera position="0 1.6 0" look-controls wasd-controls></a-entity>
+        <a-entity oculus-go-controls oculus-quest-controls x-button-listener></a-entity>
+      </a-entity>
+      
     </a-scene>
   </body>
 </html>
